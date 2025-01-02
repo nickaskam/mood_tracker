@@ -1,5 +1,9 @@
 
 class Question:
+    """
+    The structure for the daily question that the mood tracker will give the user
+    inputs: question to be answered
+    """
     def __init__(self, question_text: str):
         self.question_text = question_text
 
