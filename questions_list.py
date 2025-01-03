@@ -13,8 +13,12 @@ class Question_List:
             print(question.return_question_text())
         return
     
-    def return_one_question(self, index):
+    def return_one_question(self, index: int):
         return self.questions[index].return_question_text()
+    
+    def change_question(self, index: int, updated_question_text):
+        self.questions[index].change_question_text(updated_question_text)
+        return
     
 if __name__ == "__main__":
     question1_text = "What is your mood?"
@@ -30,3 +34,8 @@ if __name__ == "__main__":
     new_question_list.print_questions()
     print("Specific Question:")
     print(new_question_list.return_one_question(1))
+
+    question2_updated_text = "Did you get a lot done today?"
+    new_question_list.change_question(1, question2_updated_text)
+    print("Updated question 2 text:")
+    new_question_list.print_questions()
