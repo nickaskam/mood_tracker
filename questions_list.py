@@ -26,6 +26,13 @@ class Question_List:
             question_id_list.append(question.return_question_id())
         return question_id_list
     
+    def return_question_text_from_uuid(self, question_uuid: str):
+        for question in self.questions:
+            if question.question_id == question_uuid:
+                return question.question_text
+            
+        return "Question Not Found in Question List"
+    
 if __name__ == "__main__":
     question1_text = "What is your mood?"
     question1 = Question(question1_text)
