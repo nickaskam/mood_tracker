@@ -6,8 +6,8 @@ class Question:
     inputs: question to be answered
     """
     def __init__(self, question_text: str):
-        self.question_text = question_text
         self.question_id = str(uuid.uuid4())
+        self.question_text = question_text
 
     def return_question_text(self):
         return self.question_text
