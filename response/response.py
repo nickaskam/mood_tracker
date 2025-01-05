@@ -1,7 +1,7 @@
 import uuid
 import datetime
-from question import Question
-from questions_list import Question_List
+from question.question import Question
+from question.questions_list import Question_List
 
 class Response:
     def __init__(self, question_id: str, response_text: str):

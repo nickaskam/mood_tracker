@@ -1,6 +1,6 @@
-from question import Question
-from questions_list import Question_List
-from response import Response
+from question.question import Question
+from question.questions_list import Question_List
+from response.response import Response
 
 if __name__ == '__main__':
     question_text = "What is your mood today?"
