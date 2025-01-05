@@ -1,9 +1,17 @@
 import uuid
 import datetime
 
-from question.question import Question
-from question.questions_list import Question_List
-from user.user import User
+if __name__ == '__main__':
+    from .question.question import Question
+    from .question.questions_list import Question_List
+    from .user.user import User
+else:
+    from question.question import Question
+    from question.questions_list import Question_List
+    from user.user import User
+# from question.question import Question
+# from question.questions_list import Question_List
+# from user.user import User
 
 class Response:
     def __init__(self, question_id: str, response_text: str, user_id: str = None):

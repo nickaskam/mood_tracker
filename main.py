@@ -1,8 +1,6 @@
 from question.question import Question
 from question.questions_list import Question_List
-
 from response.response import Response
-
 from user.user import User
 
 if __name__ == '__main__':
