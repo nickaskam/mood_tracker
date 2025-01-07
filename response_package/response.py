@@ -1,6 +1,11 @@
 import uuid
 import datetime
 
+if __name__ == '__main__':
+    from ..question_package.question import Question
+else:
+    from question_package import Question
+
 class Response:
     def __init__(self, question_id: str, response_text: str, user_id: str = None):
         self.response_id = str(uuid.uuid4())
@@ -22,7 +27,7 @@ class Response:
         return self.response_text
 
 if __name__ == '__main__':
-
+    new_question = Question()
     
     response_text = "5 - High"
     response_test = Response("45", response_text, user_id="1")
