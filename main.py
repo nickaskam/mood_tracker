@@ -1,5 +1,4 @@
-from question_package.question import Question
-from question_package.questions_list import Question_List
+from question_package import Question, Question_List
 from response_package.response import Response
 from user_package.user import User
 
