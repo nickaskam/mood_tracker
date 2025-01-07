@@ -1,7 +1,7 @@
-from question.question import Question
-from question.questions_list import Question_List
-from response.response import Response
-from user.user import User
+from question_package.question import Question
+from question_package.questions_list import Question_List
+from response_package.response import Response
+from user_package.user import User
 
 if __name__ == '__main__':
     question_text = "What is your mood today?"

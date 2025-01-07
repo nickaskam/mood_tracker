@@ -1,4 +1,4 @@
-from question.question import Question
+from question_package.question import Question
 
 class Question_List:
     """
