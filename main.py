@@ -1,6 +1,6 @@
 from question_package import Question, Question_List
-from response_package.response import Response
-from user_package.user import User
+from response_package import Response
+from user_package import User
 
 if __name__ == '__main__':
     question_text = "What is your mood today?"
