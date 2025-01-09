@@ -5,7 +5,7 @@ class Question:
     The structure for the daily question that the mood tracker will give the user
     inputs: question to be answered
     """
-    def __init__(self, question_text: str, question_frequency: str = 'undefined'):
+    def __init__(self, question_text: str, question_frequency: str = 'daily'):
         self.question_id = str(uuid.uuid4())
         self.question_text = question_text
         self.question_frequency = self.clean_frequency_name(question_frequency)
