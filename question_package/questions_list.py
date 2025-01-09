@@ -33,6 +33,13 @@ class Question_List:
         for question in self.questions:
             if question.question_id == question_uuid:
                 return question.question_text
+        
+        return "Question Not Found in Question List"
+    
+    def return_frequency_for_question(self, question_uuid: str):
+        for question in self.questions:
+            if question.question_id == question_uuid:
+                return question.question_frequency
             
         return "Question Not Found in Question List"
     
@@ -55,5 +62,7 @@ if __name__ == "__main__":
     new_question_list.change_question(1, question2_updated_text)
     print("Updated question 2 text:")
     new_question_list.print_questions()
+
+    print("What is the frequency for this question:", new_question_list.return_frequency_for_question(question1.return_question_id()))
 
     print("What are the IDs for the questions: ", new_question_list.return_question_ids())
