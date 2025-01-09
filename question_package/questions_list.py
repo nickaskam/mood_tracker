@@ -12,8 +12,10 @@ class Question_List:
         self.questions = questions
 
     def print_questions(self):
+        index = 1
         for question in self.questions:
-            print(question.return_question_text())
+            print(index, '-', question.return_question_text())
+            index += 1
         return
     
     def return_one_question(self, index: int):
