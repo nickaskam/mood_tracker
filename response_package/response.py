@@ -20,6 +20,16 @@ class Response:
     
     def return_response_text(self):
         return self.response_text
+    
+    def return_response_dictionary(self):
+        return {self.response_id: 
+                    {
+                        "response_time": self.response_time, 
+                        "question_id": self.question_id, 
+                        "response_text": self.response_text, 
+                        "user_id": self.user_id
+                    }
+                }
 
 if __name__ == '__main__':
     response_text = "5 - High"
@@ -29,3 +39,7 @@ if __name__ == '__main__':
     question_id_in_response = response_test.return_question_id()
     print("Response Question ID:", question_id_in_response)
     print("Response Text:", response_test.return_response_text())
+
+    response_test_dict = response_test.return_response_dictionary()
+    print("response dictionary: ", response_test_dict)
+    print("response text from dict:", response_test_dict[response_test.return_response_id()]["response_text"])
