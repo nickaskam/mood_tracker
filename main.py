@@ -21,11 +21,14 @@ if __name__ == '__main__':
     
     response_text = "5 - High"
     response_test = Response(question1.return_question_id(), response_text, user_id=user_1.return_user_id())
+    response_test_id = response_test.return_response_id()
+    response_test_dict = response_test.return_response_dictionary()
+    
     print("Response ID:", response_test.return_response_id())
     print("Response Time:", response_test.return_response_time())
     question_id_in_response = response_test.return_question_id()
     print("Response Question ID:", question_id_in_response)
-    print("Response Text:", response_test.return_response_text())
+    print("Response Text:", response_test_dict[response_test_id]["response_text"])
 
     retrieved_question_text = new_question_list1.return_question_text_from_uuid(question_id_in_response)
     print("Question Text:", retrieved_question_text)
