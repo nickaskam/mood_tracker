@@ -1,6 +1,10 @@
 import uuid
 
 class User:
+    """
+    a class for a user that generates a user id and other 
+    user variables
+    """
     def __init__(self, f_name, l_name, email):
         self.user_id = str(uuid.uuid4())
         self.first_name = f_name
