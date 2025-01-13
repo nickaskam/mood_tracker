@@ -21,6 +21,8 @@ if __name__ == '__main__':
     
     response_text = "5 - High"
     response_test = Response(question1.return_question_id(), response_text, user_id=user_1.return_user_id())
+    # need to add response validator here
+    
     response_test_id = response_test.return_response_id()
     response_test_dict = response_test.return_response_dictionary()
     
