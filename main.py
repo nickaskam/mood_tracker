@@ -34,6 +34,3 @@ if __name__ == '__main__':
 
     retrieved_question_text = new_question_list1.return_question_text_from_uuid(question_id_in_response)
     print("Question Text:", retrieved_question_text)
-
-    print("adding repo")
-    print("testing comment 3")
