@@ -1,6 +1,7 @@
 from question_package import Question, Question_List
 from response_package import Response
 from user_package import User
+from response_validator import Response_Validator
 
 if __name__ == '__main__':
     question1_text = "What is your mood today?"
@@ -21,7 +22,10 @@ if __name__ == '__main__':
     
     response_text = "5 - High"
     response_test = Response(question1.return_question_id(), response_text, user_id=user_1.return_user_id())
-    # need to add response validator here
+    
+    print("checking to see if valid response")
+    was_response_valid = Response_Validator(question1, response_test)
+    print("was this valid?", was_response_valid.return_valid_response())
     
     response_test_id = response_test.return_response_id()
     response_test_dict = response_test.return_response_dictionary()
