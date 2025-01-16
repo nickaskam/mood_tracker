@@ -18,6 +18,9 @@ class Response:
     def return_question_id(self):
         return self.question_id
     
+    def return_user_id(self):
+        return self.user_id
+    
     def return_response_text(self):
         return self.response_text
     
