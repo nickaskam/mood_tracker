@@ -5,14 +5,18 @@ class Response_Validator:
     def __init__(self, question: Question, response: Response):
         self.question = question
         self.response = response
-        self.valid_response = self.check_valid_response(question, response)
+        self.valid_response = self.check_valid_ids_question_resopnse(question, response)
 
-    def check_valid_response(self, question: Question, response: Response):
+    def check_valid_ids_question_resopnse(self, question: Question, response: Response):
         response_question_id = response.return_question_id()
         question_id = question.return_question_id()
         
-        if response_question_id == question_id:
-            return True
+        try: 
+            if response_question_id == question_id:
+                return True
+
+        except:
+            print("Question ID and response Question ID do not match")
         
         return False
     
@@ -27,5 +31,6 @@ if __name__ == "__main__":
     new_response_text = "okay"
     new_response = Response(new_question.return_question_id(), new_question_text)
 
-    check_valid_response = Response_Validator(new_question, new_response)
+    wrong_question = Question("is this the right question?")
+    check_valid_response = Response_Validator(wrong_question, new_response)
     print("Was this a valid response?", check_valid_response.return_valid_response())
