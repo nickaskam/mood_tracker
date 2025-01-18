@@ -10,16 +10,16 @@ class Question:
         self.question_text = question_text
         self.question_frequency = self.clean_frequency_name(question_frequency)
 
-    def return_question_id(self):
+    def return_question_id(self) -> str:
         return self.question_id
 
-    def return_question_text(self):
+    def return_question_text(self) -> str:
         return self.question_text
     
     def change_question_text(self, new_question_text: str):
         self.question_text = new_question_text
     
-    def clean_frequency_name(self, question_frequency: str):
+    def clean_frequency_name(self, question_frequency: str) -> str:
         if question_frequency.lower() == 'daily':
             return "Daily"
         elif question_frequency.lower() == 'weekly':
@@ -29,7 +29,7 @@ class Question:
         else:
             return "Undefined"
     
-    def return_question_frequency(self):
+    def return_question_frequency(self) -> str:
         return self.question_frequency
     
     def change_question_frequency(self, new_question_frequency: str):
