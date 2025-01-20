@@ -19,7 +19,7 @@ class Question_List:
         return
     
     def return_one_question(self, index: int):
-        return self.questions[index].return_question_text()
+        return self.questions[index]
     
     def change_question(self, index: int, updated_question_text):
         self.questions[index].change_question_text(updated_question_text)

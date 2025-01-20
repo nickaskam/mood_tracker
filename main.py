@@ -25,7 +25,7 @@ if __name__ == '__main__':
     
     print("checking to see if valid response")
     # give valid test response
-    was_response_valid = Response_Validator(question1, response_test, user_1)
+    was_response_valid = Response_Validator(new_question_list1.return_one_question(0), response_test, user_1)
     print("was this valid?", was_response_valid.return_valid_response())
     
     response_test_id = response_test.return_response_id()
