@@ -13,9 +13,15 @@ class User:
         self.goal = goal
 
     def return_user_id(self) -> str:
+        """
+        returns the user id
+        """
         return self.user_id
     
     def return_user_dict(self) -> dict:
+        """
+        returns a dict of the user id and then all of the params associated
+        """
         return {self.user_id: 
                 {
                     "first_name": self.first_name,
