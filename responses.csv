@@ -1,3 +1,2 @@
-response_id, text
-aface58f-ab53-4c7e-8a67-3c2b3fa70a9a, hi
-703e7a81-5531-4fb0-a2e7-5c6062a68603, hi
+response_id, response_time, question_id, response_text, user_id
+8968a4bb-b00f-4417-82d2-6a80ce5fe0e2, 2025-01-23 21:32:48.188213, 53edce4c-3682-4b27-906b-371b9e0fd241, 5 - High, 61b457e8-5b25-4cf1-9283-3d89fe794743
