@@ -1,12 +1,12 @@
 from question_package import Question, Question_List
-from response_package import Response
+from response_package import Response, Response_Received
 from user_package import User
 from response_validator import Response_Validator
 
 if __name__ == '__main__':
     question1_text = input("What is your question? ")
     frequency_question = "What would you like the frequency to be? Monthly, Weekly or Daily? "
-    question1_frequency = input(frequency_question)
+    question1_frequency = "daily"
     question1 = Question(question1_text, question1_frequency)
 
     question2_text = "Do you feel accomplished?"
@@ -37,6 +37,9 @@ if __name__ == '__main__':
     question_id_in_response = response_test.return_question_id()
     print("Response Question ID:", question_id_in_response)
     print("Response Text:", response_test_dict[response_test_id]["response_text"])
+
+    print("inputting response into CSV")
+    new_response_received = Response_Received(response_test)
 
     retrieved_question_text = new_question_list1.return_question_text_from_uuid(question_id_in_response)
     print("Question Text:", retrieved_question_text)
