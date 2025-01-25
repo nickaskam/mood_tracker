@@ -4,7 +4,8 @@ from user_package import User
 from response_validator import Response_Validator
 
 if __name__ == '__main__':
-    question1_text = input("What is your question? ")
+    #question1_text = input("What is your question? ")
+    question1_text = "How do you feel?"
     frequency_question = "What would you like the frequency to be? Monthly, Weekly or Daily? "
     question1_frequency = "daily"
     question1 = Question(question1_text, question1_frequency)
