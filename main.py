@@ -39,7 +39,7 @@ if __name__ == '__main__':
     print("Response Question ID:", question_id_in_response)
     print("Response Text:", response_test_dict[response_test_id]["response_text"])
 
-    print("inputting response into CSV")
+    print("inputting response into CSV...")
     new_response_received = Response_Received(response_test)
 
     retrieved_question_text = new_question_list1.return_question_text_from_uuid(question_id_in_response)
