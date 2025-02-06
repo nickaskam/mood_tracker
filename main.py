@@ -11,7 +11,7 @@ if __name__ == '__main__':
     question1 = Question(question1_text, question1_frequency)
 
     question2_text = "Do you feel accomplished?"
-    question2_frequency = "dailY"
+    question2_frequency = "daily"
     question2 = Question(question2_text, question2_frequency)
 
     question_list1 = [question1, question2]
