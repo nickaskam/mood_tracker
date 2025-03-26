@@ -1,7 +1,9 @@
 from question_package import Question, Question_List
-from response_package import Response, Response_Received
+from response_package import Response, Response_Received, Read_Response
 from user_package import User
 from response_validator import Response_Validator
+
+CSV_LOCATION = '/Users/nickaskam/Documents/2025/mood_tracker/responses.csv'
 
 if __name__ == '__main__':
     #question1_text = input("What is your question? ")
@@ -44,3 +46,9 @@ if __name__ == '__main__':
 
     retrieved_question_text = new_question_list1.return_question_text_from_uuid(question_id_in_response)
     print("Question Text:", retrieved_question_text)
+
+    # For testing only, look for response regardless of what the user requested
+    response_requested = '8968a4bb-b00f-4417-82d2-6a80ce5fe0e2'
+
+    new_reader = Read_Response(CSV_LOCATION)
+    new_reader.read_response(response_requested)
