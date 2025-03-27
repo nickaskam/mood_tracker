@@ -23,7 +23,7 @@ class Read_Response:
 
 
 if __name__ == "__main__":
-    # For testing only, look for response regardless of what the user requested
+    # use a response ID in csv
     response_requested = '8968a4bb-b00f-4417-82d2-6a80ce5fe0e2'
 
     new_reader = Read_Response(CSV_LOCATION)
