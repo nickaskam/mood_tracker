@@ -8,6 +8,7 @@ response_requested = '8968a4bb-b00f-4417-82d2-6a80ce5fe0e2'
 class Read_Response:
     def __init__(self, csv_file_location):
         self.csv_file_location = csv_file_location
+        self.response_tracked = dict()
 
     def read_response(self, response_requested):
         print("\nReading Response:")
@@ -15,11 +16,24 @@ class Read_Response:
             csv_reader = csv.reader(csvfile)
             for row in csv_reader:
                 if row[0] == response_requested:
-                    print("Response ID: ", row[0])
-                    print("Response Time: ", row[1])
-                    print("Question ID: ", row[2])
-                    print("Reponse Text: ", row[3])
-                    print("User ID: ", row[4])
+                    print("Response Found!")
+
+                    self.response_tracked = {
+                        "responseId" : row[0],
+                        "responseTime" : row[1],
+                        "questionId" : row[2],
+                        "responseText" : row[3],
+                        "userId" : row[4]
+                        }
+
+
+    def print_response(self):
+        print("Response ID: ", self.response_tracked["responseId"])
+        print("Response Time: ", self.response_tracked["responseTime"])
+        print("Question ID: ", self.response_tracked["questionId"])
+        print("Reponse Text: ", self.response_tracked["responseText"])
+        print("User ID: ", self.response_tracked["userId"])
+        
 
 
 if __name__ == "__main__":
@@ -28,3 +42,4 @@ if __name__ == "__main__":
 
     new_reader = Read_Response(CSV_LOCATION)
     new_reader.read_response(response_requested)
+    new_reader.print_response()

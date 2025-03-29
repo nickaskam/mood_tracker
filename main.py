@@ -52,3 +52,4 @@ if __name__ == '__main__':
 
     new_reader = Read_Response(CSV_LOCATION)
     new_reader.read_response(response_requested)
+    new_reader.print_response()
