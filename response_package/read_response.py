@@ -1,4 +1,5 @@
 import csv
+from datetime import datetime
 
 CSV_LOCATION = '/Users/nickaskam/Documents/2025/mood_tracker/responses.csv'
 
@@ -33,6 +34,11 @@ class Read_Response:
         print("Reponse Text: ", self.response_tracked["responseText"])
         print("User ID: ", self.response_tracked["userId"])
         
+    def getDayOfResponse(self):
+        format_string = " %Y-%m-%d %H:%M:%S.%f"
+        datetime_object = datetime.strptime(self.response_tracked["responseTime"], format_string)
+        print("the Day of the week is: " + datetime_object.strftime("%A"))
+
 
 if __name__ == "__main__":
     # use a response ID in csv
@@ -41,3 +47,5 @@ if __name__ == "__main__":
     new_reader = Read_Response(CSV_LOCATION)
     new_reader.read_response(response_requested)
     new_reader.print_response()
+
+    new_reader.getDayOfResponse()
