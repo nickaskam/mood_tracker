@@ -26,7 +26,6 @@ class Read_Response:
                         "userId" : row[4]
                         }
 
-
     def print_response(self):
         print("Response ID: ", self.response_tracked["responseId"])
         print("Response Time: ", self.response_tracked["responseTime"])
@@ -34,7 +33,6 @@ class Read_Response:
         print("Reponse Text: ", self.response_tracked["responseText"])
         print("User ID: ", self.response_tracked["userId"])
         
-
 
 if __name__ == "__main__":
     # use a response ID in csv
