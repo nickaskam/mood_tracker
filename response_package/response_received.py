@@ -1,7 +1,7 @@
-if __name__ == "__main__":
-    from response import Response
-else:
-    from response_package.response import Response
+
+from response_package import Response
+from user_package import User
+from question_package import Question
 
 CSV_LOCATION = '/Users/nickaskam/Documents/2025/mood_tracker/responses.csv'
 
@@ -30,8 +30,20 @@ class Response_Received:
 
 
 if __name__ == "__main__":
-    dummy_user_id = "61b457e8-5b25-4cf1-9283-3d89fe794743"
-    dummy_question_id = "53edce4c-3682-4b27-906b-371b9e0fd241"
+    goal_text = "to improve"
+    user_1 = User("Nick", "A", "nick@a.com", goal_text)
+    
+    user1_id = user_1.return_user_id()
+    # print(user1_id)
+
+    dummy_user_id = user1_id
+
+    question_to_ask = 'How are you?'
+    frequency = 'daily'
+    new_question = Question(question_to_ask, question_frequency=frequency)
+    # print(new_question.return_question_id())
+
+    dummy_question_id = new_question.return_question_id()
     response_text = "5 - High"
 
     response_test = Response(
