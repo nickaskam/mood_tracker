@@ -1,7 +1,8 @@
-if __name__ == "__main__":
-    from question import Question
-else:
-    from question_package.question import Question
+# if __name__ == "__main__":
+#     from question import Question
+# else:
+#     
+from question_package.question import Question
 
 class Question_List:
     """

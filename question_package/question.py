@@ -9,6 +9,7 @@ class Question:
         self.question_id = str(uuid.uuid4())
         self.question_text = question_text
         self.question_frequency = self.clean_frequency_name(question_frequency)
+        self.follow_up_question_on_frequency()
 
     def return_question_id(self) -> str:
         return self.question_id
@@ -34,6 +35,9 @@ class Question:
     
     def change_question_frequency(self, new_question_frequency: str):
         self.question_frequency = self.clean_frequency_name(new_question_frequency)
+
+    def follow_up_question_on_frequency(self):
+        print("Your Current Frequency is: ", self.question_frequency, ".")
     
 if __name__ == '__main__':
     question_to_ask = 'How are you?'
