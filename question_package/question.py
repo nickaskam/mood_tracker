@@ -38,6 +38,16 @@ class Question:
 
     def follow_up_question_on_frequency(self):
         print("Your Current Frequency is: ", self.question_frequency, ".")
+
+        match self.question_frequency:
+            case "Daily":
+                print("If you would like change this, please use the change_question_freqeuncy_method\n")
+            case "Weekly":
+                print("Updating the weekly calendar to remind you\n") 
+            case "Monthly":
+                print("Updating the calendar to remind you in one month\n")
+            case "Undefined":
+                print("Please use the change_question_freqeuncy_method to enter a valid frequency\n")
     
 if __name__ == '__main__':
     question_to_ask = 'How are you?'
